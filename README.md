@@ -1,4 +1,4 @@
-# Student Project Title
+# Simulation for Multi-Agent Path Finding (MAPF) in ROS2
 Use https://shields.io/badges to create badges.
 
 ![ROS](https://img.shields.io/badge/ros-%230A0FF9.svg?style=for-the-badge&logo=ros&logoColor=white)
@@ -20,29 +20,27 @@ Use https://shields.io/badges to create badges.
 4. [Roadmap](#roadmap)
 5. [License](#license)
 6. [Contact](#contact)
+7. [Reference](#Reference)
 
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Explain what this project is about. Define the goals.
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+This project focuses on simulating multi-Agent Path Finding in ROS2, motivated by the need to efficiently coordinate multiple robots in dynamic environments. It is crucial for tasks like warehouse automation and robot fleets, optimizing paths to avoid collisions while minimizing travel time and resource usage.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ###  Software and Tools Used
 Describe here, which software and which versions you used, e.g.:
-- Python 3.12
-- Anaconda 2023.07-1
-- .....
-
+- Python 
+- Anaconda 
+- ROS2
+- Gazebo
+- ...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
@@ -69,7 +67,7 @@ Provide a step-by-step guide on how to get the project running locally. This sho
    python test.py
    ```
 
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- USAGE EXAMPLES -->
@@ -82,20 +80,24 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- ROADMAP -->
 ## Roadmap
-Descripition of the milestones of this project. Example:
-- [ ] Make the camera running: Show video stream on Raspberry Pi 5 using python
-- [ ] Install Yolo8 (ultralytics), get it running on the Pi5 (at first try nano version)
-  - [ ] Example How to run yolov8 segmentation on raspberry Pi ([Link](https://medium.com/@elvenkim1/how-to-deploy-yolov8-segmentation-on-raspberry-pi-3a70470de231)
-  - [ ] Try different sizes of model (nano, small..), investigate ressourc usage (use for example psutil python package)
-- [ ] Transfer Learning: Train it to detect certain objects (you can choose which ones, use online datasets maybe)
-- [ ] Attach soiled glass in front of camera, investigate effect on object detection
-
+Description of the milestones of this project. Example:
+- [ ] Research on approaches for the MAPF tasks
+   - [ ] Find proper algorithms for implementation 
+- [ ] Get familiar with the software  
+  - [ ] Install the ROS2 
+  - [ ] Install Gazebo, build a simulator
+- [ ] Implement MAPF algorithms and run in the simulator
+- [ ] Compare the performance between different algorithms
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## Folder structure
 Describe here, how your project is structured:
@@ -139,12 +141,13 @@ create3_project/
     ├── features
     └── model
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
 
 <!-- CONTACT -->
 ## Contact
@@ -152,6 +155,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 Your Name:
 Your e-mail:
 
+# Reference
 
 
 
