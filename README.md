@@ -156,7 +156,10 @@ Your Name:
 Your e-mail:
 
 # Reference
-
+- [Schranz, M., Umlauft, M., Sende, M., & Elmenreich, W. (2020). Swarm robotic behaviors and current applications. Frontiers in Robotics and AI, 7, 36.](https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2020.00036/full)
+- [Brambilla, M., Ferrante, E., Birattari, M., & Dorigo, M. (2013). Swarm robotics: a review from the swarm engineering perspective. Swarm Intelligence, 7, 1-41.](https://link.springer.com/article/10.1007/s11721-012-0075-2)
+- [Stern, R., Sturtevant, N., Felner, A., Koenig, S., Ma, H., Walker, T., ... & Boyarski, E. (2019). Multi-agent pathfinding: Definitions, variants, and benchmarks. In Proceedings of the International Symposium on Combinatorial Search (Vol. 10, No. 1, pp. 151-158).](https://arxiv.org/abs/1906.08291)
+- [Project: Multi-Agent Path Finding (MAPF) in ROS](https://github.com/speedzjy/mapf_ros)
 
 
 
