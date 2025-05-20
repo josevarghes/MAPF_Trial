@@ -4,7 +4,6 @@ from launch.actions import DeclareLaunchArgument
 from launch_ros.substitutions import FindPackageShare
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Command
 
-
 def generate_launch_description():
 
     # Package name
@@ -16,26 +15,39 @@ def generate_launch_description():
     # Launch configurations
     urdf = LaunchConfiguration('urdf')
     use_sim_time = LaunchConfiguration('use_sim_time')
+    namespace = LaunchConfiguration('namespace')
 
     # Declare launch arguments
+    declare_namespace = DeclareLaunchArgument(
+        'namespace', default_value='',
+        description='Namespace for the robot')
+
     declare_use_sim_time = DeclareLaunchArgument(
-            'use_sim_time', default_value='false',
-            description='Use sim time if true')
+        'use_sim_time', default_value='false',
+        description='Use sim time if true')
 
     declare_urdf = DeclareLaunchArgument(
-            name='urdf', default_value=urdf_path,
-            description='Path to the robot description file')
+        name='urdf', default_value=urdf_path,
+        description='Path to the robot description file')
 
     # Create a robot state publisher 
     robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
+        namespace=namespace,
         output='screen',
-        parameters=[{'use_sim_time': use_sim_time,'robot_description': Command(['xacro ', urdf])}]
+        parameters=[{'use_sim_time': use_sim_time, 'robot_description': Command(['xacro ', urdf])}],
+        remappings=[
+            # These remappings ensure topics are relative to the namespace
+            ('/joint_states', 'joint_states'),
+            ('/tf', 'tf'),
+            ('/tf_static', 'tf_static'),
+        ]
     )
 
     # Launch!
     return LaunchDescription([
+        declare_namespace,
         declare_urdf,
         declare_use_sim_time,
         robot_state_publisher
